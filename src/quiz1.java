@@ -15,7 +15,7 @@ public class quiz1 {
    public static String formatPercent(double percent) {
        // student code here
        percent = percent * 100;
-       return "%" + percent;
+       return percent + "%";
    }
    // Step 3
    public static int everyOtherChar(String word) {
