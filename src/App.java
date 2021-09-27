@@ -10,5 +10,6 @@ public class App {
   
         /* Your solution goes here  */
         System.out.printf("%.2f", outsideTemperature);
+        scnr.close();
     }
 }
