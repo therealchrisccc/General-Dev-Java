@@ -1,4 +1,7 @@
 {
-    "java.project.sourcePaths": ["src"],
+    "java.project.sourcePaths": [
+        "src",
+        "Encryptor-App/src"
+    ],
     "java.project.outputPath": "bin"
 }
