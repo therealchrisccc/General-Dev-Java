@@ -1,3 +1,4 @@
+/*
 import java.util.Scanner;
 
 public class NumbersPrinter {
@@ -10,7 +11,7 @@ public class NumbersPrinter {
       for (i = 0; i < values.length; ++i) {
          values[i] = scnr.nextInt();
       }
-      
+      scnr.close();
       return values;
     }
     
@@ -29,4 +30,4 @@ public class NumbersPrinter {
       NumbersPrinter myPrinter = new NumbersPrinter();
       myPrinter.printSelectedNumbers();
    }
-}
+*/
