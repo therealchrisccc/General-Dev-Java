@@ -1,3 +1,4 @@
+/*
 import java.lang.ProcessHandle.Info;
 public class palindromeChallenge {
     public static string main(String [] args) {
@@ -8,3 +9,4 @@ public class palindromeChallenge {
         }
     }
 }
+*/
