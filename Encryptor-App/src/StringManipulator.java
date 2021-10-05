@@ -51,11 +51,9 @@ public class StringManipulator {
                 msg = temp;
                 msg = msg.replaceAll("[" + VOWELS + "]", "");
                 hold += msg + " ";
-                //System.out.print(msg + " ");
             }
             else{
                 hold += temp + " ";
-                //System.out.print(retval + " ");
             }
         }
         msg = msg.replaceAll("[" + VOWELS + "]", "");
