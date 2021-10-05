@@ -8,9 +8,10 @@ public class EncryptedMessageApp {
     }
 
     private void printSplash(){
-        System.out.println("---------");
-        System.out.println("-Welcome-");
-        System.out.println("---------");
+        System.out.println("--------------------");
+        System.out.println("------Welcome-------");
+        System.out.println("MessageEncryptor 2.6");
+        System.out.println("--------------------");
     }
     void run(){
         //todo
@@ -18,4 +19,4 @@ public class EncryptedMessageApp {
     private void typePrompt() {
         System.out.print(StringManipulator.OPTIONS + ": ");
     }
-    }
+}

@@ -16,7 +16,7 @@ public class StringManipulator {
 
     public static void main(String[] args){
         System.out.println(encrypt("test 123", -1));
-        System.out.println(stringCompress("You can be a good programmer if you can read this"));
+        System.out.println(stringCompress("compression sample"));
     }
 
     public static String manipulate(String msg, String type){
