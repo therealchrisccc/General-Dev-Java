@@ -1,3 +1,4 @@
+/*
 import java.util.Scanner;
 
 public class twelvepoint3 {
@@ -15,3 +16,4 @@ public class twelvepoint3 {
    }
    
 }
+*/
