@@ -41,7 +41,17 @@ public class StringManipulator {
     }
 
     public static String runLengthEncoding(String msg) {
-        return msg;
+        int hold = msg.length();
+        String output = "";
+        for (int i = 0; i < hold; i++) {
+            int count = 0;
+            while (msg.charAt(i) == msg.charAt(i - 1)) {
+                i++;
+            }
+            output += msg.charAt(i);
+            output += count;
+        }
+        return output;
     }
 
     public static String stringCompress(String msg) {
