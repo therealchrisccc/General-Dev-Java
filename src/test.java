@@ -1,4 +1,5 @@
 public class test{
+public static char[] classArr;
 public static void threeLoops() {
     int value = 0;
     StringBuilder build = new StringBuilder();
