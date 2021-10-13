@@ -25,9 +25,9 @@ public class EncryptedMessageApp {
             Scanner scnr = new Scanner(System.in);
             askPrompt();
             String message = scnr.nextLine();
-            exitCheck = message.substring(0, 4);
+            //exitCheck = message.substring(0, 4);
             //exitCheck = message;
-            if (exitCheck.contains(exitKey)) {
+            if (message.contains(exitKey)) {
                 printExit();
                 scnr.close();
                 System.exit(1);

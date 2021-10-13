@@ -59,8 +59,13 @@ public class StringManipulator {
         for (String temp : msg.split(" ")) {
             if (temp.length() > 1) {
                 msg = temp;
+                if(msg.charAt(0) == 'a'){
+                    break;
+                }
+                else{
                 msg = msg.replaceAll("[" + VOWELS + "]", "");
                 hold += msg + " ";
+                }
             } else {
                 hold += temp + " ";
             }
