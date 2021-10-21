@@ -1,4 +1,5 @@
 public class Data {
+    private static final int COLLEGE = 0;
     private final CollegeDemographics[] collegeDemographics = { new CollegeDemographics("NS", "Natural Sciences"),
             new CollegeDemographics("EG", "Engineering") };
 
@@ -8,6 +9,7 @@ public class Data {
     private static final int TERM = 4;
 
     public Data(String term){
+        this.term = term;
 
     }
 

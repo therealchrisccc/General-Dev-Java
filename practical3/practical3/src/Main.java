@@ -11,6 +11,14 @@ public class Main {
         else{
             fileName = scnr.next();
         }
+        String term = "";
+        if(scnr.next() == ""){
+            term = "202110";
+        }
+        else{
+            term = scnr.next();
+        }
+        scnr.close();
         CSVReader test = new CSVReader(fileName, true);
     }
 }
