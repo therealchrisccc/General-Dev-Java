@@ -18,6 +18,8 @@ public class FileIO {
     public static String[] readFile(String filename) {
 
         //Student Code Here
+        String[] output;
+        
 
         //3 lines below given to students. DO NOT MODIFY
         String[] rtn = new String[lineCounter];
