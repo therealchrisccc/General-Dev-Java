@@ -1,3 +1,4 @@
+
 /**
  * FileIO lab for CS 1.
  *
@@ -13,35 +14,49 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class FileIO {
-   
-   //Part 1
+
+    // Part 1
     public static String[] readFile(String filename) {
 
-        //Student Code Here
-        String[] output;
-        
+        // Student Code Here
+        String[] lines = new String[1000];
+        int lineCounter = 0;
 
-        //3 lines below given to students. DO NOT MODIFY
+        try {
+            Scanner scnr = new Scanner(new File(filename));
+            while (scnr.hasNext()) {
+                lines[lineCounter] = scnr.next();
+                lineCounter++;
+            }
+            scnr.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        // 3 lines below given to students. DO NOT MODIFY
         String[] rtn = new String[lineCounter];
         System.arraycopy(lines, 0, rtn, 0, lineCounter);
         return rtn;
     }
 
-
-    //Part 2
+    // Part 2
     public static void reverseFile(String[] parsedFile, String filename) {
 
-        //Student Code Here
+        // Student Code Here
+        try {
+            
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
 
     }
 
-    //Part 3
+    // Part 3
     public static void logFile(String[] parsedFile, String filename) {
 
-       //Student Code Here
+        // Student Code Here
 
     }
-
 
     public static void main(String[] args) {
 
