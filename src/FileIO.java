@@ -10,6 +10,7 @@
  */
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -44,9 +45,12 @@ public class FileIO {
 
         // Student Code Here
         try {
-            
-        } catch (Exception e) {
-            //TODO: handle exception
+            FileWriter fileWriter = new FileWriter(new File(filename));
+            for (int i = parsedFile.length; i > 0; i--) {
+                fileWriter.println(i);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
 
     }
@@ -59,7 +63,8 @@ public class FileIO {
     }
 
     public static void main(String[] args) {
-
+        readFile("prince.txt");
+        reverseFile(readFile("prince.txt"), "reversed.txt");
     }
 
 }
