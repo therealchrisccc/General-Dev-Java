@@ -26,7 +26,7 @@ public class FileIO {
         try {
             Scanner scnr = new Scanner(new File(filename));
             while (scnr.hasNext()) {
-                lines[lineCounter] = scnr.next();
+                lines[lineCounter] = scnr.nextLine();
                 lineCounter++;
             }
             scnr.close();
@@ -45,9 +45,10 @@ public class FileIO {
 
         // Student Code Here
         try {
-            FileWriter fileWriter = new FileWriter(new File(filename));
+            PrintWriter pw = new PrintWriter(new File(filename));
             for (int i = parsedFile.length; i > 0; i--) {
-                fileWriter.println(i);
+                pw.println(parsedFile[(i-1)]);
+                System.out.println(parsedFile[(i-1)]);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

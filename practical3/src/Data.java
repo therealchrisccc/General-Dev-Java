@@ -8,7 +8,7 @@ public class Data {
     private final String term;
     private static final int TERM = 4;
 
-    public Data(String term){
+    public Data(String term) {
         this.term = term;
 
     }

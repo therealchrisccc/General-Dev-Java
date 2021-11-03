@@ -49,9 +49,10 @@ public class CollegeDemographics {
         majorTest = demo.findMajor("Major2");
         System.out.println("TEST: findMajor, add value - " + majorTest.getName());
 
-        //min tests
+        // min tests
         // System.out.println("TEST: getCode() returns NS - NS");
-        // System.out.println("TEST: getName() returns Natural Sciences - Natural Sciences");
+        // System.out.println("TEST: getName() returns Natural Sciences - Natural
+        // Sciences");
         // System.out.println(" TEST: findMajor, set value - Major1");
         // System.out.println("TEST: findMajor, add value - " + Major2);
     }
