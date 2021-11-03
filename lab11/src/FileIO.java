@@ -10,7 +10,7 @@
  */
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
+//import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -45,27 +45,40 @@ public class FileIO {
 
         // Student Code Here
         try {
-            PrintWriter pw = new PrintWriter(new File(filename));
+            PrintWriter writer = new PrintWriter(filename);
             for (int i = parsedFile.length; i > 0; i--) {
-                pw.println(parsedFile[(i-1)]);
-                System.out.println(parsedFile[(i-1)]);
+                writer.println(parsedFile[(i - 1)]);
+                // System.out.println(parsedFile[(i - 1)]);
             }
+            writer.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
     // Part 3
     public static void logFile(String[] parsedFile, String filename) {
+        try {
 
-        // Student Code Here
+            PrintWriter writer = new PrintWriter(filename);
+            for (int i = 0; i < parsedFile.length; i++) {
+                if (parsedFile[i].contains("LOG")) {
+                    writer.println(parsedFile[i]);
+                    System.out.println(parsedFile[i]);
+                } else {
 
+                }
+            }
+                writer.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
         readFile("prince.txt");
         reverseFile(readFile("prince.txt"), "reversed.txt");
+        logFile(readFile("logInput.txt"), "logOutputStudent.txt");
     }
 
 }
