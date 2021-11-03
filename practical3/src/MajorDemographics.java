@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MajorDemographics {
     private int femaleCount;
     private int maleCount;
@@ -5,17 +7,17 @@ public class MajorDemographics {
     private int nonBinaryCount;
 
     public MajorDemographics(String name) {
-
+        this.name = name;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void addGenderDemographic(String gender) {
-        if (gender == "M") {
+        if (gender.equals("M")) {
             maleCount++;
-        } else if (gender == "F") {
+        } else if (gender.equals("F")) {
             femaleCount++;
         } else {
             nonBinaryCount++;
@@ -23,13 +25,11 @@ public class MajorDemographics {
     }
 
     public double[] getPercents() {
-        double malePercent;
-        double femalePercent;
-        double nonBinaryPercent;
+        double total = maleCount + femaleCount + nonBinaryCount;
         double[] out = new double[3];
-        out[0] = malePercent;
-        out[1] = femalePercent;
-        out[2] = nonBinaryPercent;
+        out[0] = maleCount / total;
+        out[1] = maleCount / total;
+        out[2] = nonBinaryCount / total;
         return out;
     }
 
@@ -39,7 +39,7 @@ public class MajorDemographics {
         major.addGenderDemographic("F");
         major.addGenderDemographic("N");
         major.addGenderDemographic("");
-
+        System.out.println("TEST: " + Arrays.toString(major.getPercents()));
     }
 
 }

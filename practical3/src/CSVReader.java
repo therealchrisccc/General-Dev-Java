@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CSVReader {
     private static final String DELIMINATOR = ",";
-    private Scanner fileScanner;
+    private static Scanner fileScanner;
 
     // data/test.csv
     public CSVReader(String file, boolean skipHead) {
@@ -20,7 +20,7 @@ public class CSVReader {
         }
     }
 
-    public boolean hasNext() {
+    public static boolean hasNext() {
         return fileScanner.hasNext();
     }
 
