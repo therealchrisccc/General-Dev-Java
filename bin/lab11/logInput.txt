@@ -1,0 +1,12 @@
+LOG Inventory
+LOG Bananas x30 - $2
+LOG Strawberries x100 - $5
+LOG Milk x10 - $1.50
+LOG Bread x25 - $3.45
+
+
+Customer Data
+Sam Cooke Jan 22 1931
+Donny Hathaway Oct 1 1945
+BB King September 16 1925
+John Mayer Oct 16 1977

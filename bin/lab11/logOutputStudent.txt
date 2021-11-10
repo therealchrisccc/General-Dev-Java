@@ -1,0 +1,5 @@
+LOG Inventory
+LOG Bananas x30 - $2
+LOG Strawberries x100 - $5
+LOG Milk x10 - $1.50
+LOG Bread x25 - $3.45
