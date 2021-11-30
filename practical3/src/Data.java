@@ -18,16 +18,16 @@ public class Data {
         int i = 1;
 
         while (CSVReader.hasNext()) {
-            String[] currLine = in.getNext();
-            if (currLine.length <= 5 || !currLine[TERM].equals(term)) {
+            String[] currentLine = in.getNext();
+            if (!currentLine[TERM].equals(term) || currentLine.length <= 5) {
                 continue;
             }
-            if (currLine[COLLEGE].equals("NS")) {
+            if (currentLine[COLLEGE].equals("NS")) {
                 i = 0;
             } else {
                 i = 1;
             }
-            collegeDemographics[i].addGenderDemographic(currLine[PRIMARY_MAJOR_DESC], currLine[GENDER]);
+            collegeDemographics[i].addGenderDemographic(currentLine[PRIMARY_MAJOR_DESC], currentLine[GENDER]);
 
         }
 

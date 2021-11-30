@@ -10,17 +10,26 @@ public class MajorDemographics {
         this.name = name;
     }
 
+    public static void main(String[] args) {
+        MajorDemographics major = new MajorDemographics("Basket Weaving");
+        major.addGenderDemographic("M");
+        major.addGenderDemographic("F");
+        major.addGenderDemographic("N");
+        major.addGenderDemographic("");
+        System.out.println("TEST: " + Arrays.toString(major.getPercents()));
+    }
+
     public String getName() {
         return this.name;
     }
 
     public void addGenderDemographic(String gender) {
         if (gender.equals("M")) {
-            maleCount++;
+            maleCount = maleCount + 1;
         } else if (gender.equals("F")) {
-            femaleCount++;
+            femaleCount = femaleCount + 1;
         } else {
-            nonBinaryCount++;
+            nonBinaryCount = nonBinaryCount + 1;
         }
     }
 
@@ -31,15 +40,6 @@ public class MajorDemographics {
         out[1] = maleCount / total;
         out[2] = nonBinaryCount / total;
         return out;
-    }
-
-    public static void main(String[] args) {
-        MajorDemographics major = new MajorDemographics("Basket Weaving");
-        major.addGenderDemographic("M");
-        major.addGenderDemographic("F");
-        major.addGenderDemographic("N");
-        major.addGenderDemographic("");
-        System.out.println("TEST: " + Arrays.toString(major.getPercents()));
     }
 
 }

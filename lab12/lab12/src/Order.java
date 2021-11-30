@@ -9,8 +9,13 @@ public class Order {
      * following possible values: SMALL, MEDIUM, LARGE
      */
     // STUDENT CODE HERE
-    public enum types {HOT, ICED, BLENDED}
-    public enum sizes {SMALL, MEDIUM, LARGE}
+    public enum types {
+        HOT, ICED, BLENDED
+    }
+
+    public enum sizes {
+        SMALL, MEDIUM, LARGE
+    }
 
     Coffee[] drinks = new Coffee[10];
     int numDrinks = 0;
@@ -31,30 +36,31 @@ public class Order {
     public void readOrder(String fileName) {
         try {
             Scanner scnr = new Scanner(new File(fileName));
-            while (scnr.hasNext()){
+            while (scnr.hasNext()) {
                 Coffee c = new Coffee(scnr.nextLine());
-            
-            // Declare scanner
-            // while loop to loop through file
-            // in while loop, create coffee object by passing the current line to the coffee constructor
-                // include the following code in the while loop after creating the coffee object, then uncomment it
-				drinks[numDrinks] = c;
-				numDrinks++;
 
-				for(String f : c.flavors) {
-					if(!containsFlavor(f) && !f.isEmpty()) {
-						orderFlavors[numFlavors] = f;
-						numFlavors++;
-					}
-				}
+                // Declare scanner
+                // while loop to loop through file
+                // in while loop, create coffee object by passing the current line to the coffee
+                // constructor
+                // include the following code in the while loop after creating the coffee
+                // object, then uncomment it
+                drinks[numDrinks] = c;
+                numDrinks++;
+
+                for (String f : c.flavors) {
+                    if (!containsFlavor(f) && !f.isEmpty()) {
+                        orderFlavors[numFlavors] = f;
+                        numFlavors++;
+                    }
+                }
             }
             scnr.close();
-        }catch(
+        } catch (
 
-    FileNotFoundException e)
-    {
-        e.printStackTrace();
-    }
+        FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     // This method is a helper method used to determine whether or not the flavor is
